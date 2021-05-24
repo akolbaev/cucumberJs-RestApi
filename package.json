@@ -1,0 +1,15 @@
+{
+  "name": "cucumberapi",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --format json:./cucumber.json && node src/utils/reporter.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.2.1",
+    "cucumber-html-reporter": "^5.4.0"
+  }
+}

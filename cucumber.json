@@ -1,0 +1,154 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "web-markets-api-validation;validate-get-call-and-response",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "validate GET call and response",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "https://gateway-web-markets.tzero.com/symbols/ASPD"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "a url:",
+            "match": {
+              "location": "src/steps/webmarkets.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I send a GET request",
+            "match": {
+              "location": "src/steps/webmarkets.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 784000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I receive response code 200",
+            "match": {
+              "location": "src/steps/webmarkets.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "description",
+                      "type"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Aspen Digital, Inc.",
+                      "Aspen Security Token",
+                      "SECURITY_TOKEN"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should get data description:",
+            "match": {
+              "location": "src/steps/webmarkets.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "address",
+                      "brokerId"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "tz1aPeXr4238SL8JMzm9tDiHrqXnScHjKvtJ",
+                      "9e92fb6a-4ad9-42d6-b07c-2f58553f752a"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "tz1aPeXr4238SL8JMzm9tDiHrqXnScHjKvtJ",
+                      "a34d6da6-8fa6-41eb-8937-409678d318c9"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should get custodialAccounts:",
+            "match": {
+              "location": "src/steps/webmarkets.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should get <10> trade_docs",
+            "match": {
+              "location": "src/steps/webmarkets.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "web-markets-api-validation",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "web markets API validation",
+    "tags": [],
+    "uri": "src/features/webmarkets.feature"
+  }
+]
